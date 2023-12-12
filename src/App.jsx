@@ -9,13 +9,11 @@ import "./global.css";
 
 export function App() {
   return (
-    <>
-      <Header />
-      <div className={styles.wrapper}>
-        <BrowserRouter>
-          <Router />
-        </BrowserRouter>
-      </div>
-    </>
+    <div className={styles.wrapper}>
+      <BrowserRouter>
+        <Header />
+        <Router />
+      </BrowserRouter>
+    </div>
   );
 }

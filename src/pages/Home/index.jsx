@@ -1,22 +1,34 @@
+import { useNavigate } from "react-router-dom";
+
+import { Smiley } from "phosphor-react";
+
 import styles from "./Home.module.css";
 
 export const Home = () => {
+  const navigate = useNavigate();
+
+  const handleNavigateToProducts = () => {
+    navigate("/produtos");
+  };
+
   return (
     <div className={styles.container}>
-      
-      <main className={styles.main}>
-        <section className={styles.featuredProducts}>
-          <h2>Produtos em Destaque</h2>
-          {/* Aqui você pode adicionar componentes ou seções relacionadas aos produtos */}
-        </section>
-        <section className={styles.aboutUs}>
-          <h2>Quem Somos</h2>
-          <p>Breve descrição da FertilizaStore e seus valores.</p>
-        </section>
-      </main>
-      <footer className={styles.footer}>
-        <p>&copy; 2023 FertilizaStore. Todos os direitos reservados.</p>
-      </footer>
+      <img
+        src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Background"
+        className={styles.backgroundImage}
+      />
+      <div className={styles.overlay}>
+        <h1>Bem-vindo à FertilizaStore</h1>
+        <p>
+          Sua fonte confiável para produtos agrícolas e pecuários de alta
+          qualidade.
+        </p>
+        <button onClick={handleNavigateToProducts}>
+          <Smiley size={24} />
+          Conhecer a loja
+        </button>
+      </div>
     </div>
   );
 };

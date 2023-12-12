@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import { Timer } from "phosphor-react";
 
 import logo from "../../assets/logo.svg";
 
@@ -7,22 +6,40 @@ import styles from "./Header.module.css";
 
 export function Header() {
   return (
-    // <HeaderContainer>
-    //   <img src={igniteLogo} alt="" />
-    //   <nav>
-    //     <NavLink to="/" title="Timer">
-    //       <Timer size={24} />
-    //     </NavLink>
-    //     <NavLink to="/history" title="Histórico">
-    //       <Scroll size={24} />
-    //     </NavLink>
-    //   </nav>
-    // </HeaderContainer>
-
     <header className={styles.header}>
-      <img src={logo} alt="Logotipo da FertilizaStore" />
-      <h1>FertilizaStore</h1>
-      
+      <div className={styles.logoContainer}>
+        <img src={logo} alt="Logotipo da FertilizaStore" />
+        <h1>FertilizaStore</h1>
+      </div>
+      <nav className={styles.nav}>
+        <NavLink to="/" title="Início" activeClassName={styles.activeLink}>
+          Início
+        </NavLink>
+        <NavLink
+          to="/produtos"
+          title="Produtos"
+          activeClassName={styles.activeLink}
+        >
+          Produtos
+        </NavLink>
+        <NavLink
+          to="/servicos"
+          title="Serviços"
+          activeClassName={styles.activeLink}
+        >
+          Serviços
+        </NavLink>
+        <NavLink to="/sobre" title="Sobre" activeClassName={styles.activeLink}>
+          Sobre
+        </NavLink>
+        <NavLink
+          to="/contato"
+          title="Contato"
+          activeClassName={styles.activeLink}
+        >
+          Contato
+        </NavLink>
+      </nav>
     </header>
   );
 }

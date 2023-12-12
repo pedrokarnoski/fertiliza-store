@@ -1,0 +1,47 @@
+.aboutContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: justify;
+}
+
+.aboutContainer span {
+  color: var(--gray-100);
+  font-size: 1.7rem;
+}
+
+.aboutContainer h1 {
+  color: var(--green-500);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.aboutContainer p {
+  color: var(--gray-500);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.aboutContainer button {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+  border: 0;
+  background: var(--green-500);
+  color: var(--white);
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+.aboutContainer button svg {
+  margin-right: 8px;
+}
+
+.aboutContainer button:hover {
+  background: var(--green-300);
+}
